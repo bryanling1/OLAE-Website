@@ -1,2 +1,4 @@
-./client/.firebase
-./client/src/components/config/FBconfig.js
+.firebase
+FBconfig.js
+/json
+junk.txt
