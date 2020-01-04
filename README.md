@@ -10,7 +10,8 @@
 The [Ontario League of Associated Esports (OLAE)](https://olae.ca) is a varsity League of Legends league based in Ontario Canada. The organization specializes in assisting with the establishment of in-school clubs and producing professional live tournament coverage on its website and social media platforms.
 
 The site consists of a login system for students with real-time matchmaking and allows users to compare their in-game statistics against the entire pool of competitors. 
-
+ 
+ 
 <p align="center">
     <img alt="olae-site-preview1" title="olae-site-preview1" src="https://i.ibb.co/gyktLky/2.png.png" width="49%">
     <img alt="olae-site-preview2" title="olae-site-preview2" src="https://i.ibb.co/RBMDqz2/1.png" width="49%">
