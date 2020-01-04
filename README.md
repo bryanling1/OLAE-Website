@@ -1,7 +1,7 @@
 <h1 align="center"> OLAE Website </h1> <br>
 <p align="center">
-  <a href="https://gitpoint.co/">
-    <img alt="OLAE-2020" title="OLAE-2020" src="https://olae.ca/images/2020logo.png" width="450">
+  <a href="https://olae.ca/">
+    <img alt="OLAE-2020" title="OLAE-2020" src="https://olae.ca/images/2020logo.png" width="200px">
   </a>
 </p>
 
