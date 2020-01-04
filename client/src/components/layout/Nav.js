@@ -50,7 +50,7 @@ render(){
       <div className="sidenav-item"><a href="/news">NEWS</a></div>
       <div className="sidenav-item"><a href="/home">VIDEOS</a></div>
       {
-            this.props.auth && this.props.auth?(<a className="sidenav-login" href={"/profile/"+this.props.auth}>MY ACCOUNT</a>):(<Link className="sidenav-login" to="/login">LOGIN</Link>)
+            this.props.auth && this.props.auth?(<a className="sidenav-login" href={"/profile/"+this.props.auth}>MY ACCOUNT</a>):(<a className="sidenav-login" href="/login">LOGIN</a>)
       }
       {
             this.props.auth && this.props.auth?(<Link className="sidenav-logout"  onClick={this.handlesignout} to="/login">SIGN OUT</Link>):(null)
@@ -90,7 +90,7 @@ render(){
       <ul  className="right black-text nav-list">
         <li>
           {
-            this.props.auth && this.props.auth?(<a href={"/profile/"+this.props.auth}>MY ACCOUNT</a>):(<Link to="/login">LOGIN</Link>)
+            this.props.auth && this.props.auth?(<a href={"/profile/"+this.props.auth}>MY ACCOUNT</a>):(<a href="/login">LOGIN</a>)
           }
           
         </li>
