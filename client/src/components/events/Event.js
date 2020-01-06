@@ -232,36 +232,73 @@ return(
 this.state.isLoaded && 
 <div className="container">
 <div className="row">
-    {this.state.isLoaded && this.state.standings.length > 0 &&
-        <h1>Standings</h1>
-    }
+        {
+            this.state.isLoaded && this.state.standings.length > 0 &&
+            <h1>Upcoming Matches</h1>
+        }
+        
     </div>
     <div className="row">
-        {this.state.isLoaded && this.state.standings.length > 0 &&
-        <div className="standings-label">
-        <p className="standings-wins">W</p>
-        <p className="standings-losses">L</p>
-        </div>
+    {
+                this.state.isLoaded && this.state.dates.length > 0 && this.state[this.state.dates[this.state.week]].map((data, i)=>{
+        if (data.winner && data.date){
+        return(
+            <div key={i} style={{
+                backgroundColor:  "white",
+                borderBottom: 0,
+                marginBottom: 4,
+                marginTop: 4,
+                borderColor: "white",
+                borderWidth: 1,
+                borderStyle: 'solid',
+                outline: '1px solid rgb(245, 245, 245)'
+            }}>
+            <div className="profile-schedule-wrapper" style={{
+                border:0
+            }}>
+            
+            <h1 className="leftTeam long"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.blueTeam}>{fullTeamName(data.blueTeam)}</a></h1>
+            <h1 className="leftTeam short"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.blueTeam}>{shortFormTeamName(data.blueTeam)}</a></h1>
+            
+            <div style={{backgroundImage: "url('/images/"+data.blueTeam+".svg')"}} className="schedule-team-image"></div>
+            <div className="score">
+                <div>
+                    FINAL
+                </div>
+                <span className={data.blueTeam === data.winner ? ("winner"):(null)} >
+                {data.blueScore}
+                </span>-
+                <span className={data.redTeam === data.winner ? ("winner"):(null)} >
+                {data.redScore}
+                </span>
+            </div>
+            <div style={{backgroundImage: "url('/images/"+data.redTeam+".svg')"}} className="schedule-team-image"></div>
+            <h1 className="long"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.redTeam}>{fullTeamName(data.redTeam)}</a></h1>
+            <h1 className="short"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.redTeam}>{shortFormTeamName(data.redTeam)}</a></h1>
+            </div>
+            </div>
+        )
         }
-        {
-            this.state.isLoaded && this.state.standings.slice(0,7).map((data, i)=>{
-                return(
-                    <div className="standings-row" key={i}>
-                        <div className="standings-placement">{i + 1}</div>
-                        <div className="standings-image" style={{backgroundImage: "url('/images/"+data.team+"-icon2.svg')"}}></div>
-                        <a href={"/events/"+this.props.match.params.event+"/teams/"+data.team}>
-                        <div className="standings-team">
-                            <div className="standings-team-long">{fullTeamName(data.team)}</div>
-                            <div className="standings-team-short">{shortFormTeamName(data.team)}</div>
-                        </div>
-                        </a>
-                        <p className="standings-wins">{data.wins}</p>
-                        <p className="standings-losses">{data.losses}</p>
-                    </div>
-                )
-            })
-        }
+        if (!data.winner && data.date){
+        return(
+            <div key={i} className="profile-schedule-wrapper" style={{backgroundColor: "white", outline: '1px solid rgb(245, 245, 245)'}}>
+            <h1 className="leftTeam long"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.blueTeam}>{fullTeamName(data.blueTeam)}</a></h1>
+            <h1 className="leftTeam short"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.blueTeam}>{shortFormTeamName(data.blueTeam)}</a></h1>
+            <div style={{backgroundImage: "url('/images/"+data.blueTeam+".svg')"}} className="schedule-team-image"></div>
+            <div className="profile-schedule-time">
+                <div className="time" style={{backgroundColor: "#282828"}} >{new Date(data.date).getHours()+":"+ (new Date(data.date).getMinutes() < 10 ? ("0"+new Date(data.date).getMinutes()):(new Date(data.date).getMinutes()))}</div>
+                <div className="date"> {(new Date(data.date).getMonth() + 1) + "/" +new Date(data.date).getDate()+"/"+new Date(data.date).getFullYear()}</div>
+            </div>
+            <div style={{backgroundImage: "url('/images/"+data.redTeam+".svg')"}} className="schedule-team-image"></div>
+            <h1 className="long"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.redTeam}>{fullTeamName(data.redTeam)}</a></h1>
+            <h1 className="short"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.redTeam}>{shortFormTeamName(data.redTeam)}</a></h1>
+            </div>
+        )
+        }else return null;
+    })
+            }
     </div>
+
     {
         this.state.isLoaded && this.state.topKills.length > 0 && 
     <div className="row">
@@ -426,74 +463,38 @@ this.state.isLoaded &&
             </div>
         }
     </div>
-    
     <div className="row">
+    {this.state.isLoaded && this.state.standings.length > 0 &&
+        <h1>Standings</h1>
+    }
+    </div>
+    <div className="row">
+        {this.state.isLoaded && this.state.standings.length > 0 &&
+        <div className="standings-label">
+        <p className="standings-wins">W</p>
+        <p className="standings-losses">L</p>
+        </div>
+        }
         {
-            this.state.isLoaded && this.state.standings.length > 0 &&
-            <h1>Upcoming Matches</h1>
+            this.state.isLoaded && this.state.standings.slice(0,7).map((data, i)=>{
+                return(
+                    <div className="standings-row" key={i}>
+                        <div className="standings-placement">{i + 1}</div>
+                        <div className="standings-image" style={{backgroundImage: "url('/images/"+data.team+"-icon2.svg')"}}></div>
+                        <a href={"/events/"+this.props.match.params.event+"/teams/"+data.team}>
+                        <div className="standings-team">
+                            <div className="standings-team-long">{fullTeamName(data.team)}</div>
+                            <div className="standings-team-short">{shortFormTeamName(data.team)}</div>
+                        </div>
+                        </a>
+                        <p className="standings-wins">{data.wins}</p>
+                        <p className="standings-losses">{data.losses}</p>
+                    </div>
+                )
+            })
         }
-        
     </div>
-    <div className="row">
-    {
-                this.state.isLoaded && this.state.dates.length > 0 && this.state[this.state.dates[this.state.week]].map((data, i)=>{
-        if (data.winner && data.date){
-        return(
-            <div key={i} style={{
-                backgroundColor:  "white",
-                borderBottom: 0,
-                marginBottom: 4,
-                marginTop: 4,
-                borderColor: "white",
-                borderWidth: 1,
-                borderStyle: 'solid',
-                outline: '1px solid rgb(245, 245, 245)'
-            }}>
-            <div className="profile-schedule-wrapper" style={{
-                border:0
-            }}>
-            
-            <h1 className="leftTeam long"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.blueTeam}>{fullTeamName(data.blueTeam)}</a></h1>
-            <h1 className="leftTeam short"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.blueTeam}>{shortFormTeamName(data.blueTeam)}</a></h1>
-            
-            <div style={{backgroundImage: "url('/images/"+data.blueTeam+".svg')"}} className="schedule-team-image"></div>
-            <div className="score">
-                <div>
-                    FINAL
-                </div>
-                <span className={data.blueTeam === data.winner ? ("winner"):(null)} >
-                {data.blueScore}
-                </span>-
-                <span className={data.redTeam === data.winner ? ("winner"):(null)} >
-                {data.redScore}
-                </span>
-            </div>
-            <div style={{backgroundImage: "url('/images/"+data.redTeam+".svg')"}} className="schedule-team-image"></div>
-            <h1 className="long"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.redTeam}>{fullTeamName(data.redTeam)}</a></h1>
-            <h1 className="short"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.redTeam}>{shortFormTeamName(data.redTeam)}</a></h1>
-            </div>
-            </div>
-        )
-        }
-        if (!data.winner && data.date){
-        return(
-            <div key={i} className="profile-schedule-wrapper" style={{backgroundColor: "white", outline: '1px solid rgb(245, 245, 245)'}}>
-            <h1 className="leftTeam long"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.blueTeam}>{fullTeamName(data.blueTeam)}</a></h1>
-            <h1 className="leftTeam short"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.blueTeam}>{shortFormTeamName(data.blueTeam)}</a></h1>
-            <div style={{backgroundImage: "url('/images/"+data.blueTeam+".svg')"}} className="schedule-team-image"></div>
-            <div className="profile-schedule-time">
-                <div className="time" style={{backgroundColor: "#282828"}} >{new Date(data.date).getHours()+":"+ (new Date(data.date).getMinutes() < 10 ? ("0"+new Date(data.date).getMinutes()):(new Date(data.date).getMinutes()))}</div>
-                <div className="date"> {(new Date(data.date).getMonth() + 1) + "/" +new Date(data.date).getDate()+"/"+new Date(data.date).getFullYear()}</div>
-            </div>
-            <div style={{backgroundImage: "url('/images/"+data.redTeam+".svg')"}} className="schedule-team-image"></div>
-            <h1 className="long"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.redTeam}>{fullTeamName(data.redTeam)}</a></h1>
-            <h1 className="short"><a href={"/events/"+this.props.match.params.event+"/teams/"+data.redTeam}>{shortFormTeamName(data.redTeam)}</a></h1>
-            </div>
-        )
-        }else return null;
-    })
-            }
-    </div>
+    
     <div className="row">
         {this.state.isLoaded && this.state.standings.length > 0 &&
         <h1>The Teams</h1>
