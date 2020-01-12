@@ -34,7 +34,7 @@ return(
             <h1 className="leftTeam short">{shortFormTeamName(data[1].blueTeam)}</h1>
             <div style={{backgroundImage: "url('/images/"+data[1].blueTeam+".svg')"}} className="schedule-team-image"></div>
             <div className="profile-schedule-time">
-                <div className="time" style={{backgroundColor: this.props.teamData.dark}}>{new Date(data[1].date).getHours()+":"+ (new Date(data[1].date).getMinutes() < 10 ? ("0"+new Date(data[1].date).getMinutes()):(new Date(data[1].date).getMinutes()))}</div>
+                <div className="time" style={this.props.teamData && {backgroundColor: this.props.teamData.dark}}>{new Date(data[1].date).getHours()+":"+ (new Date(data[1].date).getMinutes() < 10 ? ("0"+new Date(data[1].date).getMinutes()):(new Date(data[1].date).getMinutes()))}</div>
                 <div className="date"> {(new Date(data[1].date).getMonth() + 1) + "/" +new Date(data[1].date).getDate()+"/"+new Date(data[1].date).getFullYear()}</div>
             </div>
             <div style={{backgroundImage: "url('/images/"+data[1].redTeam+".svg')"}} className="schedule-team-image"></div>
