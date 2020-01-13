@@ -273,6 +273,7 @@ VS
     <tbody>
         {
             this.state.stats && this.state.stats.map((data, i)=>{
+                if(data['champion_key']){
                 return(
                 <tr key={i}>
                     <td>
@@ -300,7 +301,7 @@ VS
                             <option>0</option>
                         </select>
                     </td>
-                    <td><img width="35px;" src={"http://ddragon.leagueoflegends.com/cdn/9.24.2/img/champion/"+data["champion"]+".png"} alt={data["champion"]}/></td>
+                    <td><img width="35px;" src={"http://ddragon.leagueoflegends.com/cdn/9.24.2/img/champion/"+data["champion"]+".png"} alt={data["champion_key"]}/></td>
                     <td>{data["kills"]}</td>
                     <td>{data["deaths"]}</td>
                     <td>{data["assists"]}</td>
@@ -311,7 +312,9 @@ VS
                     <td>{data["quadraKills"]}</td>
                     <td>{data["pentaKills"]}</td>
 
-                </tr>)
+                </tr>)}else{
+                    return null;
+                }
             })
         }
     </tbody>

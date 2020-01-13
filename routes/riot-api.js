@@ -99,6 +99,7 @@ router.post("/matchResults", function(req, res, next){
                     let return_data = [{},{},{},{},{},{},{},{},{},{}];
                     for(let x=0; x<10; x++){
                         return_data[x]['champion'] = championsClass.getChampionIdFromKey(body['participants'][x]['championId'])
+                        return_data[x]['champion_key'] = body['participants'][x]['championId']
                         return_data[x]['kills'] = body['participants'][x]['stats']['kills']
                         return_data[x]['deaths'] = body['participants'][x]['stats']['deaths']
                         return_data[x]['assists'] = body['participants'][x]['stats']['assists']
