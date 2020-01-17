@@ -1,7 +1,7 @@
 <h1 align="center"> Ontario League of Associated Esports -Development Website </h1> <br>
 <p align="center">
   <a href="https://olae.ca/">
-    <img alt="OLAE-2020" title="OLAE-2020" src="https://olae.ca/images/OLAE1.svg" width="300px">
+    <img alt="OLAE-2020" title="OLAE-2020" src="https://i.ibb.co/X8jSP37/image.png" width="100%">
   </a>
 </p>
 
