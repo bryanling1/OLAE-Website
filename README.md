@@ -39,5 +39,3 @@ Feel free to [file an issue](https://github.com/bryanling1/OLAE-website/issues/n
 Please open an issue first to discuss what you would like to change.
 
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
