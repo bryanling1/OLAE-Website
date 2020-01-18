@@ -18,7 +18,6 @@ class EventsDropdown extends Component{
         this.setState({event: this.props.currentEvent})
     }
     render(){
-    console.log(this.props)
     return(
     <div className="events-dropdown" style={{position:"relative"}}>
         <img style={{position:"absolute", top:"10px", left:10}} width="40px;" alt={this.state.event}src={"/images/"+this.state.event+".png"}/>

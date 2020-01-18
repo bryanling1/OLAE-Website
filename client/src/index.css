@@ -1205,6 +1205,7 @@ input:focus {
   position: relative;
   z-index: 300;
 }
+
 .match{
   background-color: #111;
   height: 0%;

@@ -14,7 +14,7 @@ componentDidMount(){
 }
 render(){
 return(
-    <div className="match-teams">
+    <div className="next-match-teams">
     <br/>
     <div className="container">
     {

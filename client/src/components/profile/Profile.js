@@ -98,7 +98,7 @@ class Profile extends Component{
             <div className="row">
                 <div className="col s12 ">
                     {
-                    this.props.live && this.props.match.params.id === this.props.auth && this.state.nextMatch && this.state.nextMatch.matchKey?(
+                    this.props.match.params.id === this.props.auth && this.state.nextMatch && this.state.nextMatch.matchKey?(
                     <div className="next-match-notifcation-wrapper">
 
                     <button onClick={this.state.nextMatch && this.state.nextMatch.status ?(()=>{this.setState({match: true})}):(null)} className={this.state.nextMatch && this.state.nextMatch.status? ("btn green next-match-button pulse"):(" btn green next-match-button disabled")}>PLAY</button>
@@ -108,6 +108,7 @@ class Profile extends Component{
                     }
                 </div>
             </div>
+             {/* <span id="demo"></span> */}
             <div className="row">
             
             {/* Profile image and info*/}    
@@ -179,7 +180,7 @@ class Profile extends Component{
                 
                
         </div>
-        <span id="demo" style={{display: "none"}}></span>
+       
     </div>
     )
     }
