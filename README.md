@@ -11,6 +11,7 @@ The [Ontario League of Associated Esports (OLAE)](https://olae.ca) is a varsity 
 
 The site consists of a login system for students with real-time matchmaking and allows users to compare their in-game statistics against the entire pool of competitors. 
  
+ [Media helpers documentation](https://github.com/bryanling1/OLAE-Media)
  
 <p align="center">
     <img alt="olae-site-preview1" title="olae-site-preview1" src="https://i.ibb.co/gyktLky/2.png.png" width="49%">
