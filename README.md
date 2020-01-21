@@ -1,7 +1,7 @@
-<h1 align="center"> Ontario League of Associated Esports -Website </h1> <br>
+<h1 align="center"> Ontario League of Associated Esports -Development Website </h1> <br>
 <p align="center">
   <a href="https://olae.ca/">
-    <img alt="OLAE-2020" title="OLAE-2020" src="https://olae.ca/images/OLAE1.svg" width="300px">
+    <img alt="OLAE-2020" title="OLAE-2020" src="https://i.ibb.co/X8jSP37/image.png" width="100%">
   </a>
 </p>
 
@@ -11,6 +11,7 @@ The [Ontario League of Associated Esports (OLAE)](https://olae.ca) is a varsity 
 
 The site consists of a login system for students with real-time matchmaking and allows users to compare their in-game statistics against the entire pool of competitors. 
  
+ [Media helpers documentation](https://github.com/bryanling1/OLAE-Media)
  
 <p align="center">
     <img alt="olae-site-preview1" title="olae-site-preview1" src="https://i.ibb.co/gyktLky/2.png.png" width="49%">
@@ -38,5 +39,3 @@ Feel free to [file an issue](https://github.com/bryanling1/OLAE-website/issues/n
 Please open an issue first to discuss what you would like to change.
 
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)

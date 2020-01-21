@@ -352,7 +352,7 @@ return(
                                 <div className="standings-image" style={{backgroundImage: "url('http://ddragon.leagueoflegends.com/cdn/9.24.2/img/champion/"+data.champion+".png')"}}></div>
                                 <div className="standings-image-team" style={{backgroundImage: "url('/images/"+data.team+"-icon2.svg')"}}></div>
                                 <div className="stats-name">
-                                    <div className="stats-name-line">{data.name}<span className="username">{" ( "+data.username+" )"}</span><span className="team">{shortFormTeamName(data.team)}</span></div>
+                                    <div className="stats-name-line">{data.name}<span className="team">{shortFormTeamName(data.team)}</span></div>
                                     <div className="stats-name-line">{data.data}<span> /5mins</span></div>
                                 </div>
                             </div>
@@ -379,7 +379,7 @@ return(
                                 <div className="standings-image" style={{backgroundImage: "url('http://ddragon.leagueoflegends.com/cdn/9.24.2/img/champion/"+data.champion+".png')"}}></div>
                                 <div className="standings-image-team" style={{backgroundImage: "url('/images/"+data.team+"-icon2.svg')"}}></div>
                                 <div className="stats-name">
-                                    <div className="stats-name-line">{data.name}<span className="username">{" ( "+data.username+" )"}</span><span className="team">{shortFormTeamName(data.team)}</span></div>
+                                    <div className="stats-name-line">{data.name}<span className="team">{shortFormTeamName(data.team)}</span></div>
                                     <div className="stats-name-line">{data.data}<span> /5mins</span></div>
                                 </div>
                             </div>
@@ -406,7 +406,7 @@ return(
                                 <div className="standings-image" style={{backgroundImage: "url('http://ddragon.leagueoflegends.com/cdn/9.24.2/img/champion/"+data.champion+".png')"}}></div>
                                 <div className="standings-image-team" style={{backgroundImage: "url('/images/"+data.team+"-icon2.svg')"}}></div>
                                 <div className="stats-name">
-                                    <div className="stats-name-line">{data.name}<span className="username">{" ( "+data.username+" )"}</span><span className="team">{shortFormTeamName(data.team)}</span></div>
+                                    <div className="stats-name-line">{data.name}<span className="team">{shortFormTeamName(data.team)}</span></div>
                                     <div className="stats-name-line">{data.data}<span> /5mins</span></div>
                                 </div>
                             </div>
@@ -433,7 +433,7 @@ return(
                                 <div className="standings-image" style={{backgroundImage: "url('http://ddragon.leagueoflegends.com/cdn/9.24.2/img/champion/"+data.champion+".png')"}}></div>
                                 <div className="standings-image-team" style={{backgroundImage: "url('/images/"+data.team+"-icon2.svg')"}}></div>
                                 <div className="stats-name">
-                                    <div className="stats-name-line">{data.name}<span className="username">{" ( "+data.username+" )"}</span><span className="team">{shortFormTeamName(data.team)}</span></div>
+                                    <div className="stats-name-line">{data.name}<span className="team">{shortFormTeamName(data.team)}</span></div>
                                     <div className="stats-name-line">{data.data}<span> /5mins</span></div>
                                 </div>
                             </div>
@@ -460,7 +460,7 @@ return(
                                 <div className="standings-image" style={{backgroundImage: "url('http://ddragon.leagueoflegends.com/cdn/9.24.2/img/champion/"+data.champion+".png')"}}></div>
                                 <div className="standings-image-team" style={{backgroundImage: "url('/images/"+data.team+"-icon2.svg')"}}></div>
                                 <div className="stats-name">
-                                    <div className="stats-name-line">{data.name}<span className="username">{" ( "+data.username+" )"}</span><span className="team">{shortFormTeamName(data.team)}</span></div>
+                                    <div className="stats-name-line">{data.name}<span className="team">{shortFormTeamName(data.team)}</span></div>
                                     <div className="stats-name-line">{data.data}<span> /5mins</span></div>
                                 </div>
                             </div>
@@ -487,7 +487,7 @@ return(
                                 <div className="standings-image" style={{backgroundImage: "url('http://ddragon.leagueoflegends.com/cdn/9.24.2/img/champion/"+data.champion+".png')"}}></div>
                                 <div className="standings-image-team" style={{backgroundImage: "url('/images/"+data.team+"-icon2.svg')"}}></div>
                                 <div className="stats-name">
-                                    <div className="stats-name-line">{data.name}<span className="username">{" ( "+data.username+" )"}</span><span className="team">{shortFormTeamName(data.team)}</span></div>
+                                    <div className="stats-name-line">{data.name}<span className="team">{shortFormTeamName(data.team)}</span></div>
                                     <div className="stats-name-line">{data.data}<span> /5mins</span></div>
                                 </div>
                             </div>

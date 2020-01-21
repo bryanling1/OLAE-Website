@@ -49,7 +49,7 @@ handleEditScore=(e)=>{
 handleAddStats=(e)=>{
     e.preventDefault();
     for(let x=0;x<10;x++){
-        if(this.state.statIds[x].split(")#%^$$$")[0] !== "0"){
+        if(this.state.statIds[x] && this.state.statIds[x].split(")#%^$$$")[0] !== "0"){
             this.props.addStat({
                 id:this.state.statIds[x].split(")#%^$$$")[0],
                 kills: this.state.stats[x].kills,
@@ -95,10 +95,14 @@ handleAddStatsByMatchId=(e)=>{
         let bluescore = 0;
         let redscore = 0;
         for(let i=0;i<5;i++){
-            bluescore += data[i]["kills"]
+            if(data[0]["kills"]){
+                bluescore += data[i]["kills"]
+            }      
         }
         for(let i=5;i<10;i++){
-            redscore += data[i]["kills"]
+            if(data[i]["kills"]){
+                redscore += data[i]["kills"]
+            }
         }
         document.getElementById('bluescore').value = bluescore;
         document.getElementById('redscore').value = redscore;

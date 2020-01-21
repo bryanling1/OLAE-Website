@@ -98,6 +98,7 @@ router.post("/matchResults", function(req, res, next){
                 if(!err && response.statusCode == 200){
                     let return_data = [{},{},{},{},{},{},{},{},{},{}];
                     for(let x=0; x<10; x++){
+                        if(body['participants'][x]){
                         return_data[x]['champion'] = championsClass.getChampionIdFromKey(body['participants'][x]['championId'])
                         return_data[x]['champion_key'] = body['participants'][x]['championId']
                         return_data[x]['kills'] = body['participants'][x]['stats']['kills']
@@ -112,7 +113,7 @@ router.post("/matchResults", function(req, res, next){
                         return_data[x]['visionScore'] = body['participants'][x]['stats']['visionScore']
                         return_data[x]['id'] = 0
                         return_data[x]['matchTime'] = body['gameDuration']
-
+                        }
                     }
                     callback(return_data)
                 }else{
