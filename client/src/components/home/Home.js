@@ -194,7 +194,7 @@ return(
                 </div>
                 </div>
                 <br/>
-                Closes January 18
+                Closes February 2nd
             </div>
             <div className="col s12 m2"></div>
         </div>
@@ -305,10 +305,7 @@ return(
     <div className="col s12 m6">
         
         <h2>Registration Ends</h2>
-        <h3>January 18th</h3>
-        <br/>
-        <h2>Provincials</h2>
-        <h3>TBD</h3>
+        <h3>February 2nd</h3>
     </div>
     </div>
 </div>
