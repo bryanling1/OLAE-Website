@@ -16,7 +16,7 @@
     "redux": "^4.0.1",
     "redux-firestore": "^0.6.2",
     "redux-thunk": "^2.3.0",
-    "terser": "^3.14.1",
+    "terser": "^4.8.1",
     "thunk": "0.0.1"
   },
   "scripts": {
